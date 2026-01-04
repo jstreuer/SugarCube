@@ -2,8 +2,11 @@ var main = {
 
     // Functions
     onload : function(){
-
-         // Various loads
+        
+        // Prevents some stupid refresh bugs of the browser
+        htmlInteraction.enableButtonClass("home_button");
+        
+        // Various loads
         sugar.onload();
         // Set recurring events
         window.setInterval(this.deciSecondInterval.bind(this), 100);
