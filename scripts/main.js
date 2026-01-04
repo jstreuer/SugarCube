@@ -2,6 +2,9 @@ var main = {
 
     // Functions
     onload : function(){
+
+         // Various loads
+        sugar.onload();
         // Set recurring events
         window.setInterval(this.deciSecondInterval.bind(this), 100);
         window.setInterval(this.secondInterval.bind(this), 1000);
