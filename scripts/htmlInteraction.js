@@ -20,7 +20,7 @@ var htmlInteraction = {
     
     setInnerHtml : function(id, value){
         document.getElementById(id).innerHTML = value;
-        darkMode.update();
+        // darkMode.update();
     },
     
     disableButton : function(id){
