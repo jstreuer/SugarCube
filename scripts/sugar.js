@@ -6,7 +6,7 @@ var sugar = {
 
     // Functions
     onload : function(){
-        number.setSugar(0); // We first have 0 sugar
+        this.setSugar(0); // We first have 0 sugar
     },
 
     setSugar : function(value){
