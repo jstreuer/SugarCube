@@ -1,23 +1,40 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Sugar licking sim !</title>
+    <title>Sugar Cubes!</title>
     
     <!-- Some tools which won't need any other js file -->
     <script type="text/javascript" src="./scripts/htmlInteraction.js"></script>
+    <script type="text/javascript" src="./scripts/random.js"></script>
     
     <!-- Data stuff : sugar, sugarcubes, energy... -->
-    <script type="text/javascript" src="./scripts/sugar.js"></script>
+    <script type="text/javascript" src="./scripts/resources.js"></script>
     <!-- The main js file which calls the other ones -->
     <script type="text/javascript" src="./scripts/main.js"></script>
   </head>
 <body>
 
-<h1>Hello World!</h1>
-
-<p>I will make a nice page here.</p>
 <p>Sugar game!</p>
-<span id="sugar"></span><br/>
+<!-- Resource pane -->
+<pre>
+<span id="sugar"></span>
+<button class="home_button" id="lick_qrt" onclick="resources.lickQuarter();" style="visibility:hidden">Lick some of your sugar</button>
+<button class="home_button" id="lick" onclick="resources.lickAll();" style="visibility:hidden">Lick your sugar</button>
 
+<span id="saliva"></span>
+<span id="sugarwater"></span>
+<span id="amylase"></span>
+
+<span id="rockcandy"></span>
+<span id="sugarcubes"></span>
+<span id="candies"></span>
+<span id="lollipops"></span>
+<span id="jellybabies"></span>
+
+<span id="energy"></span>
+<span id="lives"></span>
+</pre>
+
+<button class="home_button" id="debug" onclick="resources.debug();" style="visibility:hidden">DEBUG</button>
 </body>
 </html>
