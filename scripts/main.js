@@ -7,7 +7,7 @@ var main = {
         htmlInteraction.enableButtonClass("home_button");
         
         // Various loads
-        sugar.onload();
+        resources.onload();
         // Set recurring events
         window.setInterval(this.deciSecondInterval.bind(this), 100);
         window.setInterval(this.secondInterval.bind(this), 1000);
@@ -15,11 +15,12 @@ var main = {
 
     deciSecondInterval : function(){
         // Fast interval
+        resources.evaporateLiquids();
     },
 
     secondInterval : function(){
         // Regular interval
-        sugar.increaseSugar();
+        resources.increaseSugar();
     }
 
   };    
