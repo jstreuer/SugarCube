@@ -1,0 +1,15 @@
+.ascii {
+  font-family: monospace;
+  white-space: pre;
+}
+
+.centeredascii {
+  font-family: monospace;
+  white-space: pre;
+  text-align: center;
+}
+
+.inline {
+    display: inline;
+    text-align:center;
+}

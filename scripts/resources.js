@@ -18,12 +18,6 @@ var resources = {
     energy : 0,
     lives : 0,
 
-    // Functions
-    onload : function(){
-        this.setSugar(0); // We first have 0 sugar, this sets the text
-        htmlInteraction.showButton("debug");
-    },
-
     // Setters
     setSugar : function(value){
         this.sugar = Math.max(0,value);
@@ -92,6 +86,12 @@ var resources = {
     setLives : function(value){
         this.lives = Math.max(0,value);
         htmlInteraction.setInnerHtml("lives", "You have " + this.lives + " lives!");
+    },
+
+    // Functions
+    onload : function(){
+        this.setSugar(0); // We first have 0 sugar, this sets the text
+        htmlInteraction.showButton("debug");
     },
 
     // Interval based
