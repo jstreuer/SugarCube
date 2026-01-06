@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Sugar Cubes!</title>
+    <title>The peaceful lake</title>
     
     <!-- Some tools which won't need any other js file -->
     <script type="text/javascript" src="./scripts/htmlInteraction.js"></script>
@@ -9,17 +9,80 @@
     
     <!-- Data stuff : sugar, sugarcubes, energy... -->
     <script type="text/javascript" src="./scripts/resources.js"></script>
+    <!-- Objects : things to see on screen... -->
+		<script type="text/javascript" src="./scripts/lake.js"></script>
     <!-- The main js file which calls the other ones -->
     <script type="text/javascript" src="./scripts/main.js"></script>
+
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="./style.css"/>
   </head>
 <body>
 
-<p>Sugar game!</p>
-<!-- Resource pane -->
+<div class="centeredascii">
+<div id="lakedescription" class="inline"></div>
+<div class="inline">
+_______________________
+  ___________________  
+ /                   \ 
+ \_   <span id="lakewave1">   </span>            / 
+   \          <span id="lakewave2">   </span>  _/  
+   /              /    
+   \_____________/     
+</div>
+<div class="centeredascii" style="visibility:hidden">
+ __ 
+/__\
+|==|
+|==|
+</div>
+<div class="inline">
+<button id="scoopwater" class="home_button" onclick="lake.scoopWater();" style="visibility:hidden">Scoop up some water</button>
+<button id="dropwater" class="home_button" onclick="lake.dropWater();" style="visibility:hidden">Drop the water</button>
+<button id="drinkwater" class="home_button" onclick="lake.drinkWater();" style="visibility:hidden">Drink water</button>
+</div>
+<div id="water" class="inline"></div>
+</div>
+
 <pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</pre>
 <span id="sugar"></span>
 <button class="home_button" id="lick_qrt" onclick="resources.lickQuarter();" style="visibility:hidden">Lick some of your sugar</button>
 <button class="home_button" id="lick" onclick="resources.lickAll();" style="visibility:hidden">Lick your sugar</button>
+
+
+
+
+
+
 <span id="saliva"></span>
 <span id="sugarwater"></span>
 <span id="amylase"></span>
@@ -36,7 +99,7 @@
 <span id="jellybabies"></span>
 <span id="energy"></span>
 <span id="lives"></span>
-</pre>
+</div>
 
 <button class="home_button" id="debug" onclick="resources.debug();" style="visibility:hidden">DEBUG</button>
 </body>
