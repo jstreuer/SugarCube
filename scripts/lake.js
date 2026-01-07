@@ -32,21 +32,21 @@ var lake = {
         else if(this.waterScoopSize == 50 && this.waterMax == 1000) message.print("lake","You use your hands to scoop some water into your bucket.");
         else if(this.waterScoopSize == 1000 && this.waterMax == 1000) message.print("lake","You scoop up some water with your bucket.");
         else message.print("lake","You scoop up some water.");
-        storykeys.increment("scoopwater");
+        story.increment("scoopwater");
     },
     dropWater : function(){
         droppedAmount = this.water;
         this.setWater(0);
         message.print("lake","You drop the water back into the lake.");
         
-        storykeys.increment("dropwater");
-        if(droppedAmount >= 1000) storykeys.increment("dropfullbucket");
+        story.increment("dropwater");
+        if(droppedAmount >= 1000) story.increment("dropfullbucket");
     },
     drinkWater : function(){
         this.setWater(this.water - this. waterDrinkSize);
         message.print("lake","You drink some of your water. How refreshing!");
 
-        storykeys.increment("drinkwater");
+        story.increment("drinkwater");
     },
 
     getBucket : function(){
@@ -54,7 +54,7 @@ var lake = {
         buttons.checkWater();
         message.print("lake","You walk over to the bucket to pick it up.\nIt looks small, might be a toy bucket.\nYou pick it up, walk back, and step back into the water.");
 
-        storykeys.increment("getbucket");
+        story.increment("getbucket");
     },
     equipBucket : function(){
         this.waterScoopSize = 1000;

@@ -1,4 +1,4 @@
-var storykeys = {
+var story = {
 
     storyChapterCounter : 0,
     storyProgressCounter : 0,
