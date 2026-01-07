@@ -1,6 +1,8 @@
-.inline {
-    display: inline;
-    text-align:center;
+.inlineascii {
+  display: inline;
+  text-align:center;
+  font-family: monospace;
+  white-space: pre;
 }
 
 .gamegrid3x3 {
@@ -14,8 +16,6 @@
   grid-template-columns: repeat(4, 1fr);
 }
 
-.centeredascii {
-  font-family: monospace;
-  white-space: pre;
+.centered {
   text-align: center;
 }

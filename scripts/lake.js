@@ -2,8 +2,6 @@ var lake = {
 
     animationtimer : 0,
 
-    description : "You find yourself on the banks of a calm lake.",
-
     water : 0,
     waterScoopSize : 50,
     waterMax : 50,
@@ -14,16 +12,11 @@ var lake = {
 
     onload : function(){
         // Set initial description
-        this.setDescription(this.description);
+        message.print("lake","You find yourself on the banks of a calm lake.");
     },
 
 
     // Setters
-    setDescription : function(value){
-        this.description = value;
-        htmlInteraction.setInnerHtml("lakedescription", value);
-    },
-
     setWater : function(value){
         this.water = Math.max(0,value);
         if(value !== 0) message = "You are carrying " + this.water + "ml of water.";
@@ -34,16 +27,16 @@ var lake = {
     // Functions
     scoopWater : function(){
         if(this.water + this.waterScoopSize > this.waterMax){
-            this.setDescription("You cannot carry any more water.");
+            message.print("lake","You cannot carry any more water.");
             return;
         }
         this.setWater(this.water + this.waterScoopSize);
         htmlInteraction.showButton("dropwater");
-        this.setDescription("You scoop up some water with you hands.");
+        message.print("lake","You scoop up some water with you hands.");
     },
     dropWater : function(){
         if(this.water == 0){
-            this.setDescription("You are not carrying any water.");
+            message.print("lake","You are not carrying any water.");
             return;
         }
         this.setWater(0);
@@ -51,35 +44,36 @@ var lake = {
         if(this.storyChapterCounter == 0){
             this.storyProgressCounter += 1;
             if(this.storyProgressCounter >= 5){
-                this.setDescription("You drop the water back into the lake. You are getting thirsty.");
+                message.print("lake","You drop the water back into the lake. You are getting thirsty.");
                 htmlInteraction.showButton("drinkwater");
                 return;
             }
         }
 
-        this.setDescription("You drop the water back into the lake.");
+        message.print("lake","You drop the water back into the lake.");
     },
     drinkWater : function(){
         if(this.water == 0){
-            this.setDescription("Your mouth does not reach the lake.");
+            message.print("lake","Your mouth does not reach the lake.");
             return;
         }
         this.setWater(this.water - this. waterDrinkSize);
 
         if(this.storyChapterCounter == 0){
             this.storyChapterCounter += 1
-            this.setDescription("How refreshing! You take a look at the beautiful meadow that surrounds you.\nYou see a bucket, washed up on the lakeside.");
+            message.print("lake","How refreshing! You take a look at the beautiful meadow that surrounds you.\nYou see a bucket, washed up on the lakeside.");
             htmlInteraction.setElementVisibility("washedupbucket",true);
             htmlInteraction.showButton("getbucket");
             return;
         }
-        this.setDescription("You drink some of your water.");
+        message.print("lake","You drink some of your water.");
     },
 
     getBucket : function(){
         htmlInteraction.setElementVisibility("washedupbucket",false);
         htmlInteraction.setElementVisibility("inventorybucket",true);
         htmlInteraction.hideButton("getbucket");
+        message.print("lake","You walk over to the bucket to pick it up.\nIt looks small, might be a toy bucket.\nYou pick it up, walk back, and step back into the water.");
         this.waterMax = 1000;
     },
 
