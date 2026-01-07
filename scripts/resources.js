@@ -135,22 +135,4 @@ var resources = {
         this.setRockCandy(this.rockCandy-1);
         this.setCandy(this.candy+1);
     },
-
-    // Debug button
-    debug : function(){
-            this.setSugar(10000000);
-
-            this.setSaliva(1000);
-            this.setSugarWater(200);
-            this.setAmylase(69);
-
-            this.setRockCandy(20);
-            this.setSugarCube(10);
-            this.setCandy(30);
-            this.setLollipop(40);
-            this.setJellyBabies(50);
-
-            this.setEnergy(100);
-            this.setLives(5);
-    }
 }

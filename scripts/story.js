@@ -34,10 +34,9 @@ var story = {
                     this.storyProgressCounter = 0;
                 }
                 if(this.storyChapterCounter == 6){
-                    message.print("lakeevent","...but it did not help... At least there is birdsong to enjoy!");
+                    message.print("lakeevent","You are still hungry, however.\nAt least there is birdsong to enjoy!");
                     htmlInteraction.hideButton("drinkwater");
-                    htmlInteraction.setElementVisibility("bird",true);
-                    // meadow.bird add
+                    htmlInteraction.setElementVisibility("birds",true);
                     this.storyChapterCounter = 7
                     this.storyProgressCounter = 0;
                 }

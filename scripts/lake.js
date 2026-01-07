@@ -16,7 +16,7 @@ var lake = {
 
     // Setters
     setWater : function(value){
-        this.water = Math.max(0,value);
+        this.water = Math.min(this.waterMax,Math.max(0,value));
         buttons.checkWater();
 
         if(value !== 0) text = "You are carrying " + this.water + "ml of water.";

@@ -15,6 +15,7 @@
   <script type="text/javascript" src="./scripts/resources.js"></script>
   <!-- Game Objects : things to see on screen... -->
   <script type="text/javascript" src="./scripts/lake.js"></script>
+  <script type="text/javascript" src="./scripts/meadow.js"></script>
   <!-- The main js file which calls the other ones -->
   <script type="text/javascript" src="./scripts/main.js"></script>
 
@@ -25,21 +26,23 @@
 <body>
 
 <div>
-<div id="DEBUG" class="inlineascii"></div>
 
 <!-- 3x3 grid of centeredascii cells -->
 <div class="gamegrid3x3">
 
 <!-- ROW 1 -->
 
-<div class="centered"></div>
+<div class="centered">
+<div id="DEBUG" class="inlineascii"></div><br/>
+<button class="home_button" id="debug" onclick="main.debug();" style="visibility:hidden">DEBUG</button>
+</div>
 
 <div class="centered">
 <div id="lakedescription" class="inlineascii"></div>
 <div id="lakeeventdescription" class="inlineascii"></div>
 <div class="inlineascii">
 _____________________________
-     ___________________    
+     ___________________     
     /                   \    
     \_   <span id="lakewave1">   </span>            /    
       \          <span id="lakewave2">   </span>  _/     
@@ -95,69 +98,11 @@ _____________________________
 <!-- 4-column grid of centeredascii cells -->
 <div class="gamegrid4">
 
-
-
-<div class="centered">
-<div id="bird" class="inlineascii" style="visibility:hidden">
-&lto   
- \\\/
- _// 
-</div>
-</div>
-
-
+<!-- COLUMN 1 -->
 
 <div class="centered">
-  
-</div>
-
-
-
-<div class="centered">
-  
-</div>
-
-
-
-<div class="centered">
-  
-</div>
-
-</div>
-
-</div>
-
-
 
 <pre>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 <span id="sugar"></span>
 <button class="home_button" id="lick_qrt" onclick="resources.lickQuarter();" style="visibility:hidden">Lick some of your sugar</button>
 <button class="home_button" id="lick" onclick="resources.lickAll();" style="visibility:hidden">Lick your sugar</button>
@@ -179,11 +124,46 @@ _____________________________
 <span id="jellybabies"></span>
 <span id="energy"></span>
 <span id="lives"></span>
+</pre>
+
 </div>
 
-<button class="home_button" id="debug" onclick="resources.debug();" style="visibility:hidden">DEBUG</button>
+<!-- COLUMN 2 -->
 
-</pre>
+<div class="centered">
+
+</div>
+
+<!-- COLUMN 3 -->
+
+<div class="centered">
+
+<div id="birds" style="visibility:hidden">
+<div id="meadowdescription" class="inlineascii"></div>
+<div id="meadoweventdescription" class="inlineascii"></div>
+<div class="inlineascii">
+'"""'"'"'""'""'""'"""'"""'""'
+                             
+        <span id="birdchirp"></span>              
+             <span id="birdhead"></span>             
+              \\\/           
+              _//            
+</div>
+</div>
+
+</div>
+
+<!-- COLUMN 4 -->
+
+<div class="centered">
+  
+</div>
+
+</div>
+
+</div>
+
+
 
 </body>
 </html>
