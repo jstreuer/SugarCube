@@ -1,0 +1,21 @@
+.inlineascii {
+  display: inline;
+  text-align:center;
+  font-family: monospace;
+  white-space: pre;
+}
+
+.gamegrid3x3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+}
+
+.gamegrid4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.centered {
+  text-align: center;
+}

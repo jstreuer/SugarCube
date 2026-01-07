@@ -7,6 +7,7 @@ var main = {
         htmlInteraction.enableButtonClass("home_button");
         
         // Various loads
+        lake.onload();
         resources.onload();
         // Set recurring events
         window.setInterval(this.deciSecondInterval.bind(this), 100);
@@ -15,6 +16,8 @@ var main = {
 
     deciSecondInterval : function(){
         // Fast interval
+        lake.animation();
+
         resources.evaporateLiquids();
     },
 
