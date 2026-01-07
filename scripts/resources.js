@@ -21,62 +21,62 @@ var resources = {
     // Setters
     setSugar : function(value){
         this.sugar = Math.max(0,value);
-        if(value !== 0) message = "There is " + this.sugar + " sugar on the pile!";
-        else message = "There is no sugar pile...";
-        htmlInteraction.setInnerHtml("sugar", message);
+        if(value !== 0) text = "There is " + this.sugar + " sugar on the pile!";
+        else text = "There is no sugar pile...";
+        htmlInteraction.setInnerHtml("sugar", text);
     
         if(this.sugar >= 10) htmlInteraction.showButton("lick");
         if(this.sugar >= 20) htmlInteraction.showButton("lick_qrt");
     },
     setSaliva : function(value){
         this.saliva = Math.max(0,value);
-        message = "You have " + this.saliva + "ml saliva. Yuck.";
-        htmlInteraction.setInnerHtml("saliva", message);
+        text = "You have " + this.saliva + "ml saliva. Yuck.";
+        htmlInteraction.setInnerHtml("saliva", text);
     },
     setSugarWater : function(value){
         this.sugarWater = Math.max(0,value);
-        message = "You have " + this.sugarWater + "ml sugar water.";
-        htmlInteraction.setInnerHtml("sugarwater", message);
+        text = "You have " + this.sugarWater + "ml sugar water.";
+        htmlInteraction.setInnerHtml("sugarwater", text);
     },
     setAmylase : function(value){
         this.amylase = Math.max(0,value);
-        if(value == 1) message = "You have a single amylase molecule.";
-        else message = "You have " + this.amylase + " amylase molecules.";
-        htmlInteraction.setInnerHtml("amylase", message);
+        if(value == 1) text = "You have a single amylase molecule.";
+        else text = "You have " + this.amylase + " amylase molecules.";
+        htmlInteraction.setInnerHtml("amylase", text);
     },
 
     setRockCandy : function(value){
         this.rockCandy = Math.max(0,value);
-        if(value == 1) message = "You have a chunk of rock candy!";
-        else message = "You have " + this.rockCandy + " chunks of rock candy!";
-        htmlInteraction.setInnerHtml("rockcandy", message);
+        if(value == 1) text = "You have a chunk of rock candy!";
+        else text = "You have " + this.rockCandy + " chunks of rock candy!";
+        htmlInteraction.setInnerHtml("rockcandy", text);
         htmlInteraction.setElementVisibility("rockcandy_icon",true);
         htmlInteraction.showButton("chiselrockcube");
         htmlInteraction.showButton("chiselrocksphere");
     },
     setSugarCube : function(value){
         this.sugarCube = Math.max(0,value);
-        if(value == 1) message = "You have a sugarcube!";
-        else message = "You have " + this.sugarCube + " sugarcubes!";
-        htmlInteraction.setInnerHtml("sugarcubes", message);
+        if(value == 1) text = "You have a sugarcube!";
+        else text = "You have " + this.sugarCube + " sugarcubes!";
+        htmlInteraction.setInnerHtml("sugarcubes", text);
     },
     setCandy : function(value){
         this.candy = Math.max(0,value);
-        if(value == 1) message = "You have a piece of candy!";
-        else message = "You have " + this.candy + " pieces of candy!";
-        htmlInteraction.setInnerHtml("candies", message);
+        if(value == 1) text = "You have a piece of candy!";
+        else text = "You have " + this.candy + " pieces of candy!";
+        htmlInteraction.setInnerHtml("candies", text);
     },
     setLollipop : function(value){
         this.lollipop = Math.max(0,value);
-        if(value == 1) message = "You have a lollipop!";
-        else message = "You have " + this.lollipop + " lollipops!";
-        htmlInteraction.setInnerHtml("lollipops", message);
+        if(value == 1) text = "You have a lollipop!";
+        else text = "You have " + this.lollipop + " lollipops!";
+        htmlInteraction.setInnerHtml("lollipops", text);
     },
     setJellyBabies : function(value){
         this.jellybabies = Math.max(0,value);
-        if(value == 1) message = "You have a... Jelly Babies..?";
-        else message = "You have " + this.jellybabies + "... Jelly Babies..?";
-        htmlInteraction.setInnerHtml("jellybabies", message);
+        if(value == 1) text = "You have a... Jelly Babies..?";
+        else text = "You have " + this.jellybabies + "... Jelly Babies..?";
+        htmlInteraction.setInnerHtml("jellybabies", text);
     },
 
     setEnergy : function(value){

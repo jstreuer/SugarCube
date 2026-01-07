@@ -11,7 +11,7 @@ var lake = {
     storyProgressCounter : 0,
 
     onload : function(){
-        // Set initial description
+        // Set initial message
         message.print("lake","You find yourself on the banks of a calm lake.");
     },
 
@@ -19,9 +19,9 @@ var lake = {
     // Setters
     setWater : function(value){
         this.water = Math.max(0,value);
-        if(value !== 0) message = "You are carrying " + this.water + "ml of water.";
-        else message = "You are carrying no water.";
-        htmlInteraction.setInnerHtml("water", message);
+        if(value !== 0) text = "You are carrying " + this.water + "ml of water.";
+        else text = "You are carrying no water.";
+        htmlInteraction.setInnerHtml("water", text);
     },
 
     // Functions
