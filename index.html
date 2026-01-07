@@ -4,14 +4,16 @@
 <head>
   <title>The peaceful lake</title>
 
-  <!-- Some tools which won't need any other js file -->
+  <!-- Some tools -->
   <script type="text/javascript" src="./scripts/htmlInteraction.js"></script>
+  <script type="text/javascript" src="./scripts/buttons.js"></script>
   <script type="text/javascript" src="./scripts/random.js"></script>
   <script type="text/javascript" src="./scripts/message.js"></script>
+  <script type="text/javascript" src="./scripts/story.js"></script>
 
   <!-- Data stuff : sugar, sugarcubes, energy... -->
   <script type="text/javascript" src="./scripts/resources.js"></script>
-  <!-- Objects : things to see on screen... -->
+  <!-- Game Objects : things to see on screen... -->
   <script type="text/javascript" src="./scripts/lake.js"></script>
   <!-- The main js file which calls the other ones -->
   <script type="text/javascript" src="./scripts/main.js"></script>
@@ -23,6 +25,7 @@
 <body>
 
 <div>
+<div id="DEBUG" class="inlineascii"></div>
 
 <!-- 3x3 grid of centeredascii cells -->
 <div class="gamegrid3x3">
@@ -33,14 +36,15 @@
 
 <div class="centered">
 <div id="lakedescription" class="inlineascii"></div>
+<div id="lakeeventdescription" class="inlineascii"></div>
 <div class="inlineascii">
-_______________________
-  ___________________  
- /                   \ 
- \_   <span id="lakewave1">   </span>            / 
-   \          <span id="lakewave2">   </span>  _/  
-   /              /    
-   \_____________/     
+_____________________________
+     ___________________    
+    /                   \    
+    \_   <span id="lakewave1">   </span>            /    
+      \          <span id="lakewave2">   </span>  _/     
+      /              /       
+      \_____________/        
 </div>
 </div>
 

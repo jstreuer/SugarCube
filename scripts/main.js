@@ -2,6 +2,7 @@ var main = {
 
     // Functions
     onload : function(){
+        message.print("DEBUG","DEBUG");
         
         // Prevents some stupid refresh bugs of the browser
         htmlInteraction.enableButtonClass("home_button");

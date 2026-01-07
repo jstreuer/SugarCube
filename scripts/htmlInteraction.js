@@ -1,5 +1,6 @@
 var htmlInteraction = {
   
+    // Maybe used?
     setElementDisplay : function(id, display){
         document.getElementById(id).style.display = display;
     },
@@ -8,6 +9,7 @@ var htmlInteraction = {
         return document.getElementById(id);
     },
     
+    // Used
     setElementVisibility : function(id, bool){
         if(bool) document.getElementById(id).style.visibility = "visible";
         else document.getElementById(id).style.visibility = "hidden";
@@ -18,11 +20,25 @@ var htmlInteraction = {
         return true;
     },
     
+    // Used
     setInnerHtml : function(id, value){
         document.getElementById(id).innerHTML = value;
         // darkMode.update();
     },
+        
+    // Used
+    enableButton : function(id){
+        this.getElement(id).disabled = "";
+    },
     
+    enableButtonClass : function(id){
+        var arr = document.getElementsByClassName(id);
+        for(var i = 0; i < arr.length; i++){
+            arr[i].disabled = "";
+        }
+    },
+
+    // Used
     disableButton : function(id){
         this.getElement(id).disabled = "disabled";
     },
@@ -34,17 +50,7 @@ var htmlInteraction = {
         }
     },
     
-    enableButton : function(id){
-        this.getElement(id).disabled = "";
-    },
-    
-    enableButtonClass : function(id){
-        var arr = document.getElementsByClassName(id);
-        for(var i = 0; i < arr.length; i++){
-            arr[i].disabled = "";
-        }
-    },
-    
+    // Used
     showButton : function(id){
         htmlInteraction.setElementVisibility(id, true);
     },
@@ -56,6 +62,7 @@ var htmlInteraction = {
         }
     },
     
+    // Used
     hideButton : function(id){
         htmlInteraction.setElementVisibility(id, false);
     },
