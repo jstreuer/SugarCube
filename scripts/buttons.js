@@ -9,7 +9,7 @@ var buttons = {
 
     checkWater : function(){
         
-        if(lake.water + lake.waterScoopSize <= lake.waterMax) this.enableButton("scoopwater");
+        if(lake.water + lake.waterScoopSize <= lake.waterMax || lake.waterScoopSize >= 1000 && lake.water !== lake.waterMax) this.enableButton("scoopwater");
         else this.disableButton("scoopwater");
 
         if(lake.water > 0) this.enableButton("dropwater");
