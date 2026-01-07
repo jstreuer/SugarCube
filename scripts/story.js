@@ -19,7 +19,7 @@ var story = {
                 break;
             case "drinkwater":
                 if(this.storyChapterCounter == 1){
-                    message.print("lakeevent","You take a look at the beautiful meadow that surrounds you.\nYou see a bucket, washed up on the lakeside.");
+                    message.print("lakeevent","You take a look at the beautiful meadow that surrounds you.\nYou see a bucket, washed up on the lakeside!");
                     htmlInteraction.hideButton("drinkwater");
                     htmlInteraction.setElementVisibility("washedupbucket",true);
                     htmlInteraction.showButton("getbucket");
@@ -31,6 +31,14 @@ var story = {
                     htmlInteraction.hideButton("drinkwater");
                     lake.equipBucket();
                     this.storyChapterCounter = 5
+                    this.storyProgressCounter = 0;
+                }
+                if(this.storyChapterCounter == 6){
+                    message.print("lakeevent","...but it did not help... At least there is birdsong to enjoy!");
+                    htmlInteraction.hideButton("drinkwater");
+                    htmlInteraction.setElementVisibility("bird",true);
+                    // meadow.bird add
+                    this.storyChapterCounter = 7
                     this.storyProgressCounter = 0;
                 }
                 break;
@@ -57,8 +65,13 @@ var story = {
             case "scoopwater":
                 if(this.storyChapterCounter == 5){
                     message.print("lakeevent","");
-                    this.storyChapterCounter = 6
-                    this.storyProgressCounter = 0;
+                    this.storyProgressCounter += 1;
+                    if(this.storyProgressCounter >= 10){
+                        message.print("lakeevent","You are getting hungry.");
+                        htmlInteraction.showButton("drinkwater");
+                        this.storyChapterCounter = 6
+                        this.storyProgressCounter = 0;
+                    }
                 }
                 break;
         }
