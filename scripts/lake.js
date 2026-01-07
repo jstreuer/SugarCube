@@ -68,10 +68,19 @@ var lake = {
 
         if(this.storyChapterCounter == 0){
             this.storyChapterCounter += 1
-            this.setDescription("How refreshing! You take a look at the beautiful meadow that surrounds you. You see a bucket, washed up on the lakeside.");
+            this.setDescription("How refreshing! You take a look at the beautiful meadow that surrounds you.\nYou see a bucket, washed up on the lakeside.");
+            htmlInteraction.setElementVisibility("washedupbucket",true);
+            htmlInteraction.showButton("getbucket");
             return;
         }
         this.setDescription("You drink some of your water.");
+    },
+
+    getBucket : function(){
+        htmlInteraction.setElementVisibility("washedupbucket",false);
+        htmlInteraction.setElementVisibility("inventorybucket",true);
+        htmlInteraction.hideButton("getbucket");
+        this.waterMax = 1000;
     },
 
     animation : function(){

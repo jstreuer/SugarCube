@@ -1,15 +1,21 @@
-.ascii {
-  font-family: monospace;
-  white-space: pre;
+.inline {
+    display: inline;
+    text-align:center;
+}
+
+.gamegrid3x3 {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+}
+
+.gamegrid4 {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
 }
 
 .centeredascii {
   font-family: monospace;
   white-space: pre;
   text-align: center;
-}
-
-.inline {
-    display: inline;
-    text-align:center;
 }

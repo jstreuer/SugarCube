@@ -1,23 +1,34 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>The peaceful lake</title>
-    
-    <!-- Some tools which won't need any other js file -->
-    <script type="text/javascript" src="./scripts/htmlInteraction.js"></script>
-    <script type="text/javascript" src="./scripts/random.js"></script>
-    
-    <!-- Data stuff : sugar, sugarcubes, energy... -->
-    <script type="text/javascript" src="./scripts/resources.js"></script>
-    <!-- Objects : things to see on screen... -->
-		<script type="text/javascript" src="./scripts/lake.js"></script>
-    <!-- The main js file which calls the other ones -->
-    <script type="text/javascript" src="./scripts/main.js"></script>
 
-    <!-- CSS -->
-    <link rel="stylesheet" type="text/css" href="./style.css"/>
-  </head>
+<head>
+  <title>The peaceful lake</title>
+
+  <!-- Some tools which won't need any other js file -->
+  <script type="text/javascript" src="./scripts/htmlInteraction.js"></script>
+  <script type="text/javascript" src="./scripts/random.js"></script>
+
+  <!-- Data stuff : sugar, sugarcubes, energy... -->
+  <script type="text/javascript" src="./scripts/resources.js"></script>
+  <!-- Objects : things to see on screen... -->
+  <script type="text/javascript" src="./scripts/lake.js"></script>
+  <!-- The main js file which calls the other ones -->
+  <script type="text/javascript" src="./scripts/main.js"></script>
+
+  <!-- CSS -->
+  <link rel="stylesheet" type="text/css" href="./style.css" />
+</head>
+
 <body>
+
+<div>
+
+<!-- 3x3 grid of centeredascii cells -->
+<div class="gamegrid3x3">
+
+<!-- ROW 1 -->
+
+<div class="centeredascii"></div>
 
 <div class="centeredascii">
 <div id="lakedescription" class="inline"></div>
@@ -30,19 +41,68 @@ _______________________
    /              /    
    \_____________/     
 </div>
-<div class="centeredascii" style="visibility:hidden">
+</div>
+
+<div class="centeredascii">
+<div id="washedupbucket" class="inline" style="visibility:hidden">
  __ 
 /__\
 |==|
 |==|
 </div>
+</div>
+
+<!-- ROW 2 -->
+
+<div class="centeredascii"></div>
+
+<div class="centeredascii">
 <div class="inline">
 <button id="scoopwater" class="home_button" onclick="lake.scoopWater();" style="visibility:hidden">Scoop up some water</button>
 <button id="dropwater" class="home_button" onclick="lake.dropWater();" style="visibility:hidden">Drop the water</button>
 <button id="drinkwater" class="home_button" onclick="lake.drinkWater();" style="visibility:hidden">Drink water</button>
 </div>
+</div>
+
+<div class="centeredascii">
+<button id="getbucket" class="home_button" onclick="lake.getBucket();" style="visibility:hidden">Collect the bucket</button>
+</div>
+
+<!-- ROW 3 -->
+
+<div class="centeredascii"></div>
+
+<div class="centeredascii">
 <div id="water" class="inline"></div>
 </div>
+
+<div class="centeredascii">
+<div id="inventorybucket" class="inline" style="visibility:hidden">
+ __ 
+/__\
+|==|
+|==|
+</div>
+</div>
+
+</div>
+
+<!-- 4-column grid of centeredascii cells -->
+<div class="gamegrid4">
+
+<div class="centeredascii">empty</div>
+
+<div class="centeredascii">empty</div>
+
+<div class="centeredascii">empty</div>
+
+<div class="centeredascii">empty</div>
+
+</div>
+
+</div>
+
+
 
 <pre>
 
@@ -73,20 +133,15 @@ _______________________
 
 
 
-</pre>
 <span id="sugar"></span>
 <button class="home_button" id="lick_qrt" onclick="resources.lickQuarter();" style="visibility:hidden">Lick some of your sugar</button>
 <button class="home_button" id="lick" onclick="resources.lickAll();" style="visibility:hidden">Lick your sugar</button>
 
-
-
-
-
-
 <span id="saliva"></span>
 <span id="sugarwater"></span>
 <span id="amylase"></span>
-<div id="rockcandy_icon" style="visibility:hidden;">   __   
+<div id="rockcandy_icon" style="visibility:hidden;">
+   __   
   / /\  
  _\_\/_ 
 / /\/ /\
@@ -102,5 +157,8 @@ _______________________
 </div>
 
 <button class="home_button" id="debug" onclick="resources.debug();" style="visibility:hidden">DEBUG</button>
+
+</pre>
+
 </body>
 </html>
