@@ -9,7 +9,7 @@ var lake = {
 
     onload : function(){
         // Set initial message
-        message.print("lake","You find yourself on the banks of a calm lake.");
+        message.print("lakedescription","You find yourself on the banks of a calm lake.");
         message.print("lakeevent","");
     },
 
@@ -28,23 +28,23 @@ var lake = {
     scoopWater : function(){
         this.setWater(this.water + this.waterScoopSize);
         htmlInteraction.showButton("dropwater");
-        if(this.waterScoopSize == 50 && this.waterMax == 50) message.print("lake","You scoop up some water with your hands.");
-        else if(this.waterScoopSize == 50 && this.waterMax == 1000) message.print("lake","You use your hands to scoop some water into your bucket.");
-        else if(this.waterScoopSize == 1000 && this.waterMax == 1000) message.print("lake","You scoop up some water with your bucket.");
-        else message.print("lake","You scoop up some water.");
+        if(this.waterScoopSize == 50 && this.waterMax == 50) message.print("lakedescription","You scoop up some water with your hands.");
+        else if(this.waterScoopSize == 50 && this.waterMax == 1000) message.print("lakedescription","You use your hands to scoop some water into your bucket.");
+        else if(this.waterScoopSize == 1000 && this.waterMax == 1000) message.print("lakedescription","You scoop up some water with your bucket.");
+        else message.print("lakedescription","You scoop up some water.");
         story.increment("scoopwater");
     },
     dropWater : function(){
         droppedAmount = this.water;
         this.setWater(0);
-        message.print("lake","You drop the water back into the lake.");
+        message.print("lakedescription","You drop the water back into the lake.");
         
         story.increment("dropwater");
         if(droppedAmount >= 1000) story.increment("dropfullbucket");
     },
     drinkWater : function(){
         this.setWater(this.water - this. waterDrinkSize);
-        message.print("lake","You drink some of your water. How refreshing!");
+        message.print("lakedescription","You drink some of your water. How refreshing!");
 
         story.increment("drinkwater");
     },
@@ -52,7 +52,7 @@ var lake = {
     getBucket : function(){
         this.waterMax = 1000;
         buttons.checkWater();
-        message.print("lake","You walk over to the bucket to pick it up.\nIt looks small, might be a toy bucket.\nYou pick it up, walk back, and step back into the water.");
+        message.print("lakedescription","You walk over to the bucket to pick it up.\nIt looks small, might be a toy bucket.\nYou take it back, and step back into the water.");
 
         story.increment("getbucket");
     },

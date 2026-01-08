@@ -17,5 +17,16 @@ var buttons = {
         
         if(lake.water >= 50) this.enableButton("drinkwater");
         else this.disableButton("drinkwater");
+    },
+
+    checkSeeds : function(){
+
+    },
+    checkPeanuts : function(){
+        
+    },
+    checkGround : function(){
+        if(meadow.seedsOnGround > 0 || meadow.peanutsOnGround > 0) this.enableButton("investigate");
+        else this.disableButton("investigate");
     }
 }

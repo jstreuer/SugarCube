@@ -5,11 +5,16 @@ var story = {
 
     increment : function(source){
 
+        // Clear lake when in capter 7
+        if(this.storyChapterCounter == 7){
+            message.print("lakeevent","");
+        }
+
         switch(source){
             case "dropwater":
                 if(this.storyChapterCounter == 0){
                     this.storyProgressCounter += 1;
-                    if(this.storyProgressCounter >= 5){
+                    if(this.storyProgressCounter >= 3){
                         message.print("lakeevent","You are getting thirsty.");
                         htmlInteraction.showButton("drinkwater");
                         this.storyChapterCounter = 1;
@@ -36,7 +41,7 @@ var story = {
                 if(this.storyChapterCounter == 6){
                     message.print("lakeevent","You are still hungry, however.\nAt least there is birdsong to enjoy!");
                     htmlInteraction.hideButton("drinkwater");
-                    htmlInteraction.setElementVisibility("birds",true);
+                    htmlInteraction.setElementVisibility("meadow",true);
                     this.storyChapterCounter = 7
                     this.storyProgressCounter = 0;
                 }
@@ -65,7 +70,7 @@ var story = {
                 if(this.storyChapterCounter == 5){
                     message.print("lakeevent","");
                     this.storyProgressCounter += 1;
-                    if(this.storyProgressCounter >= 10){
+                    if(this.storyProgressCounter >= 5){
                         message.print("lakeevent","You are getting hungry.");
                         htmlInteraction.showButton("drinkwater");
                         this.storyChapterCounter = 6

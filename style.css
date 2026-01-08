@@ -1,14 +1,7 @@
-.inlineascii {
-  display: inline;
-  text-align:center;
-  font-family: monospace;
-  white-space: pre;
-}
-
 .gamegrid3x3 {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(3, 1fr);
+  grid-template-rows: repeat(3, auto);
 }
 
 .gamegrid4 {
@@ -19,4 +12,33 @@
 
 .centered {
   text-align: center;
+}
+
+.inlineascii {
+  display: inline;
+  text-align: center;
+  font-family: monospace;
+  white-space: pre;
+}
+
+.messagebox {
+  display: inline-block;
+  height: 4lh;
+}
+
+.water_button {
+  padding: 2px 6px;
+  background-color:#bff1ff;
+  border: solid;
+  border-color:#767676;
+  border-width:1px;
+  border-radius:3px;
+}
+.water_button:hover {
+  background-color: #b5efff;
+  border-color:#4F4F4F;
+}
+.water_button:disabled {
+  background-color: #EEEEEE;
+  border-color:#D2D2D2;
 }
