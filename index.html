@@ -16,6 +16,7 @@
   <!-- Game Objects : things to see on screen... -->
   <script type="text/javascript" src="./scripts/lake.js"></script>
   <script type="text/javascript" src="./scripts/meadow.js"></script>
+  <script type="text/javascript" src="./scripts/bird.js"></script>
   <!-- The main js file which calls the other ones -->
   <script type="text/javascript" src="./scripts/main.js"></script>
 
@@ -33,27 +34,32 @@
 <!-- ROW 1 -->
 
 <div class="centered">
-<div id="DEBUG" class="inlineascii"></div><br/>
+<div id="DEBUG" class="inlineascii"></div>
+<br/>
 <button class="home_button" id="debug" onclick="main.debug();" style="visibility:hidden">DEBUG</button>
 </div>
 
 <div class="centered">
+<div class="messagebox">
+<div id="laketitle" class="inlineascii">The peaceful lake</div>
+<br/>
 <div id="lakedescription" class="inlineascii"></div>
+<br/>
 <div id="lakeeventdescription" class="inlineascii"></div>
-<div class="inlineascii">
-_____________________________
+</div>
+<div class="inlineascii">_____________________________
      ___________________     
     /                   \    
     \_   <span id="lakewave1">   </span>            /    
       \          <span id="lakewave2">   </span>  _/     
       /              /       
       \_____________/        
+                             
 </div>
 </div>
 
 <div class="centered">
-<div id="washedupbucket" class="inlineascii" style="visibility:hidden">
- __ 
+<div id="washedupbucket" class="inlineascii" style="visibility:hidden"> __ 
 /__\
 |==|
 |==|
@@ -65,11 +71,11 @@ _____________________________
 <div class="centered"></div>
 
 <div class="centered">
-<div class="inlineascii">
 <button id="scoopwater" class="home_button" onclick="lake.scoopWater();" style="visibility:hidden">Scoop up some water</button>
+<br/>
 <button id="dropwater" class="home_button" onclick="lake.dropWater();" style="visibility:hidden">Drop the water</button>
-<button id="drinkwater" class="home_button" onclick="lake.drinkWater();" style="visibility:hidden">Drink water</button>
-</div>
+<br/>
+<button id="drinkwater" class="home_button water_button" onclick="lake.drinkWater();" style="visibility:hidden">Drink water</button>
 </div>
 
 <div class="centered">
@@ -85,8 +91,7 @@ _____________________________
 </div>
 
 <div class="centered">
-<div id="inventorybucket" class="inlineascii" style="visibility:hidden">
- __ 
+<div id="inventorybucket" class="inlineascii" style="visibility:hidden"> __ 
 /__\
 |==|
 |==|
@@ -138,17 +143,27 @@ _____________________________
 
 <div class="centered">
 
-<div id="birds" style="visibility:hidden">
+<div id="meadow" style="visibility:hidden">
+<div class="messagebox">
+<div id="meadowtitle" class="inlineascii">The grassy meadow</div>
+<br/>
 <div id="meadowdescription" class="inlineascii"></div>
+<br/>
 <div id="meadoweventdescription" class="inlineascii"></div>
-<div class="inlineascii">
-'"""'"'"'""'""'""'"""'"""'""'
-                             
-        <span id="birdchirp"></span>              
-             <span id="birdhead"></span>             
-              \\\/           
-              _//            
 </div>
+<div class="inlineascii">'"""'"'"'""'""'""'"""'"""'""'
+</div>
+<div id="birds" class="inlineascii" onmouseenter="bird.flyAway()"><span id="birdchirp"></span> 
+   <span id="birdhead"></span>  
+    \\\/
+    _// 
+</div>
+<br/>
+<button id="investigate" class="home_button" onclick="meadow.investigate();" style="visibility:hidden">Investigate</button>
+<br/>
+<div id="seeds" class="inlineascii"></div>
+<br/>
+<div id="peanuts" class="inlineascii"></div>
 </div>
 
 </div>
