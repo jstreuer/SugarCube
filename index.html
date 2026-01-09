@@ -18,6 +18,7 @@
   <script type="text/javascript" src="./scripts/meadow.js"></script>
   <script type="text/javascript" src="./scripts/bird.js"></script>
   <script type="text/javascript" src="./scripts/field.js"></script>
+  <script type="text/javascript" src="./scripts/farm.js"></script>
   <!-- The main js file which calls the other ones -->
   <script type="text/javascript" src="./scripts/main.js"></script>
 
@@ -158,6 +159,17 @@
 |──|──|──|──|──|──|;         
 '"""'"'"'""'""'""'"          
 </div>
+<div id="wheat" class="inlineascii"></div>
+<br/>
+<div id="seeds" class="inlineascii"></div>
+<br/>
+<button id="plantseed" class="home_button" onclick="field.plantSeed();" style="visibility:hidden">Plant Seeds</button>
+<br/>
+<div id="growingseeds" class="inlineascii"></div>
+<br/>
+<div id="grownwheat" class="inlineascii"></div>
+<br/>
+<button id="harvest" class="home_button" onclick="field.harvest();" style="visibility:hidden">Harvest Wheat</button>
 </div>
 
 </div>
@@ -184,8 +196,6 @@
 </div>
 <br/>
 <button id="investigate" class="home_button" onclick="meadow.investigate();" style="visibility:hidden">Investigate</button>
-<br/>
-<div id="seeds" class="inlineascii"></div>
 <br/>
 <div id="peanuts" class="inlineascii"></div>
 </div>

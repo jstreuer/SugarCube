@@ -28,6 +28,8 @@ var main = {
     secondInterval : function(){
         // Regular interval
         resources.increaseSugar();
+        meadow.secondInterval();
+        field.secondInterval();
     },
 
     // Debug button

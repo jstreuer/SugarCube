@@ -23,8 +23,8 @@ var bird = {
         htmlInteraction.setElementVisibility("birds",false);
         message.print("meadowevent","The bird flew away!");
 
-        meadow.setSeedsOnGround(1);
-        meadow.setPeanutsOnGround(1);
+        meadow.dropOnGround();
+        meadow.setBirdSpawnTimer();
         htmlInteraction.showButton("investigate");
     },
 
