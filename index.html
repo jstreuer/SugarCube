@@ -17,6 +17,7 @@
   <script type="text/javascript" src="./scripts/lake.js"></script>
   <script type="text/javascript" src="./scripts/meadow.js"></script>
   <script type="text/javascript" src="./scripts/bird.js"></script>
+  <script type="text/javascript" src="./scripts/field.js"></script>
   <!-- The main js file which calls the other ones -->
   <script type="text/javascript" src="./scripts/main.js"></script>
 
@@ -41,7 +42,7 @@
 
 <div class="centered">
 <div class="messagebox">
-<div id="laketitle" class="inlineascii">The peaceful lake</div>
+<div id="laketitle" class="inlineascii"></div>
 <br/>
 <div id="lakedescription" class="inlineascii"></div>
 <br/>
@@ -137,6 +138,28 @@
 
 <div class="centered">
 
+<div id="field" style="visibility:hidden">
+<div class="messagebox">
+<div id="fieldtitle" class="inlineascii">A grassy field</div>
+<br/>
+<div id="fielddescription" class="inlineascii"></div>
+<br/>
+<div id="fieldeventdescription" class="inlineascii"></div>
+</div>
+<br/>
+<div id="farm" class="inlineascii">'"""'"'"'""'""'""'"""'"""'""'
+                             
+      |──|──|──|──|──|──|;   
+     /;"'v""v""v"'v"'v"/;    
+    |;  v  v  v  v  v |;     
+   /;  v  v  v  v  v /;      
+  |;  v  v  v  v  v |;       
+ /;  v  v  v  v  v /;        
+|──|──|──|──|──|──|;         
+'"""'"'"'""'""'""'"          
+</div>
+</div>
+
 </div>
 
 <!-- COLUMN 3 -->
@@ -145,12 +168,13 @@
 
 <div id="meadow" style="visibility:hidden">
 <div class="messagebox">
-<div id="meadowtitle" class="inlineascii">The grassy meadow</div>
+<div id="meadowtitle" class="inlineascii"></div>
 <br/>
 <div id="meadowdescription" class="inlineascii"></div>
 <br/>
 <div id="meadoweventdescription" class="inlineascii"></div>
 </div>
+<br/>
 <div class="inlineascii">'"""'"'"'""'""'""'"""'"""'""'
 </div>
 <div id="birds" class="inlineascii" onmouseenter="bird.flyAway()"><span id="birdchirp"></span> 

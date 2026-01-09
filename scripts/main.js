@@ -10,6 +10,7 @@ var main = {
         // Various loads
         lake.onload();
         meadow.onload();
+        field.onload();
         resources.onload();
         // Set recurring events
         window.setInterval(this.deciSecondInterval.bind(this), 100);

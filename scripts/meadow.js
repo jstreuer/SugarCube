@@ -7,6 +7,7 @@ var meadow = {
 
     onload : function(){
         // Set initial message
+        message.print("meadowtitle","The grassy meadow");
         message.print("meadowdescription","");
         message.print("meadowevent","");
     },
@@ -49,5 +50,7 @@ var meadow = {
         this.setSeedsOnGround(0);
         this.setPeanuts(this.peanuts + this.peanutsOnGround);
         this.setPeanutsOnGround(0);
+        message.print("meadowdescription","You investigate and find some things.");
+        message.print("meadowevent","");
     }
 }
