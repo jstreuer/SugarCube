@@ -9,6 +9,7 @@ var lake = {
 
     onload : function(){
         // Set initial message
+        message.print("laketitle","The peaceful lake");
         message.print("lakedescription","You find yourself on the banks of a calm lake.");
         message.print("lakeevent","");
     },

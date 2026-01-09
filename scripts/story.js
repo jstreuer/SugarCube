@@ -42,6 +42,7 @@ var story = {
                     message.print("lakeevent","You are still hungry, however.\nAt least there is birdsong to enjoy!");
                     htmlInteraction.hideButton("drinkwater");
                     htmlInteraction.setElementVisibility("meadow",true);
+                    htmlInteraction.setElementVisibility("field",true);
                     this.storyChapterCounter = 7
                     this.storyProgressCounter = 0;
                 }

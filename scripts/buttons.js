@@ -20,7 +20,18 @@ var buttons = {
     },
 
     checkSeeds : function(){
-
+        if(field.seeds !== 0){
+            htmlInteraction.showButton("plantseed");
+            this.enableButton("plantseed");
+        }
+        else this.disableButton("plantseed");
+    },
+    checkGrownWheat : function(){
+        if(farm.wheatReady !== 0){
+            htmlInteraction.showButton("harvest");
+            this.enableButton("harvest");
+        }
+        else this.disableButton("harvest");
     },
     checkPeanuts : function(){
         
